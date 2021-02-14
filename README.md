@@ -39,4 +39,3 @@ curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://local
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"3333\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
-
