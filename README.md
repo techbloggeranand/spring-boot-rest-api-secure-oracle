@@ -1,5 +1,5 @@
 # spring-boot-rest-api-secure-oracle
-- spring boot application demonstrating simple rest endpoint to persist data in DB using JPA
+- spring boot application demonstrating simple rest endpoint to persist data in Oracle DB using JPA
 - The API is secured by basic authentication implemented using spring security.
 - Credentials are read from application.properties.
 - Given below are few cURL commands that can be used to test the api.
