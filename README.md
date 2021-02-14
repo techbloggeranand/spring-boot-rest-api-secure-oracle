@@ -2,6 +2,7 @@
 - spring boot application demonstrating simple rest endpoint to persist data in Oracle DB using JPA
 - The API is secured by basic authentication implemented using spring security.
 - Credentials are read from `application.properties`.
+- The SQL to create the employee table in database is there in `schema.sql` under `src/resources' folder.
 - Given below are few cURL commands that can be used to test the api.
 
 ###### 1. Wrong username
