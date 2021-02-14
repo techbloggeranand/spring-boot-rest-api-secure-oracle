@@ -4,37 +4,37 @@
 - Credentials are read from application.properties.
 - Given below are few cURL commands that can be used to test the api.
 
-###### wrong username
+###### 1. Wrong username
 ```ruby
 curl -i -u anan:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"2222\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### wrong password
+###### 2. Wrong password
 ```ruby
 curl -i -u anand:C0mp -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"2222\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### Employee Id is not numeric
+###### 3. Employee Id is not numeric
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"22a22\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### Employee Id is missing
+###### 4. Employee Id is missing
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### Invalid email id format
+###### 5. Invalid email id format
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"2222\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### Email id is missing
+###### 6. Email id is missing
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"2222\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
 
-###### Successful request
+###### 7. Successful request
 ```ruby
 curl -i -u anand:C0mpl3* -H "Content-Type: application/json" -XPOST http://localhost:8080/employee-service/api/v1/journal/employees -d "{\"employeeId\":\"3333\",\"firstName\":\"Anand1\",\"lastName\":\"Technical1\",\"email\":\"anand.technical@test.com\",\"dob\":\"02-02-1981\",\"phNumber\":\"222-331\"}"
 ```
