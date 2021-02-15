@@ -2,16 +2,12 @@ package com.anandtech.employee.domain;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
  
-@Entity
 public class Employee {
 
     private String employeeId;
@@ -26,8 +22,6 @@ public class Employee {
 
     @Positive(message = "ERR003:employee id must be a number")
     @NotNull(message = "ERR001:employee id is mandatory")
-    @Id
-    @Column(name="employee_id")
 	public String getEmployeeId() {
 		return employeeId;
 	}
@@ -35,7 +29,6 @@ public class Employee {
 		this.employeeId = employeeId;
 	}
 
-    @Column(name="first_name")
 	public String getFirstName() {
 		return firstName;
 	}
@@ -43,7 +36,6 @@ public class Employee {
 		this.firstName = firstName;
 	}
 
-    @Column(name="last_name")
 	public String getLastName() {
 		return lastName;
 	}
@@ -53,7 +45,6 @@ public class Employee {
 	
     @NotNull(message = "ERR002:email is mandatory")
     @Email(message = "ERR004:email format must be like abc@def.com")
-    @Column(name="email")
 	public String getEmail() {
 		return email;
 	}
@@ -61,7 +52,6 @@ public class Employee {
 		this.email = email;
 	}
 	
-    @Column(name="ph_number")
 	public String getPhNumber() {
 		return phNumber;
 	}
@@ -69,7 +59,6 @@ public class Employee {
 		this.phNumber = phNumber;
 	}
 	
-	@Column(name="dob")
 	public LocalDate getDob() {
 		return dob;
 	}

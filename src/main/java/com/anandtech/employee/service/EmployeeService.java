@@ -10,20 +10,20 @@ import javax.validation.ValidatorFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.anandtech.employee.dao.EmployeeDao;
 import com.anandtech.employee.domain.Employee;
 import com.anandtech.employee.exceptions.EmployeeValidationException;
-import com.anandtech.employee.repository.EmployeeRepository;
 import com.anandtech.employee.util.Constants;
 
 @Service
 public class EmployeeService implements IEmployeeService{
 
 	@Autowired
-	EmployeeRepository employeeRepository;
+	EmployeeDao employeeDao;
 	
 	public Employee createEmployee(Employee emp) {
 		validate(emp);
-		employeeRepository.save(emp);
+		employeeDao.saveEmployee(emp);
 		return emp;
 	}
 	
